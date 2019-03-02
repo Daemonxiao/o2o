@@ -17,7 +17,7 @@ public class ShopDaoTest extends BastTest {
     @Autowired
     private ShopDao shopDao;
     @Test
-    @Ignore
+    //@Ignore
     public void testInsertShop(){
         Shop shop = new Shop();
         PersonInfo owner = new PersonInfo();

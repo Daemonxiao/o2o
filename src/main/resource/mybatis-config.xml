@@ -14,4 +14,7 @@
         <!-- 打印查询语句 -->
         <setting value="STDOUT_LOGGING" name="logImpl"/>
     </settings>
+    <plugins>
+        <plugin interceptor="com.wu.dao.split.DynamicDataSourceInterceptor"></plugin>
+    </plugins>
 </configuration>
