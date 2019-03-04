@@ -8,6 +8,7 @@ import com.wu.entity.Shop;
 import com.wu.entity.ShopCategory;
 import com.wu.enums.ShopStateEnum;
 import com.wu.service.AreaService;
+import com.wu.service.ProductCategoryService;
 import com.wu.service.ShopCategoryService;
 import com.wu.service.ShopService;
 import com.wu.util.CodeUtil;
@@ -38,6 +39,7 @@ public class ShopManagementController {
     @Autowired
     private AreaService areaService;
 
+
     @RequestMapping(value = "/getshopmanagementinfo", method = RequestMethod.GET)
     @ResponseBody
     private Map<String, Object> getShopManagementInfo(HttpServletRequest request) {
@@ -47,7 +49,7 @@ public class ShopManagementController {
             Object currentShopObj = request.getSession().getAttribute("currentShop");
             if (currentShopObj == null) {
                 modelMap.put("redirect", true);
-                modelMap.put("url", "/shop/shoplist");
+                modelMap.put("url", "/shopadmin/shoplist");
             } else {
                 Shop currentShop = (Shop) currentShopObj;
                 modelMap.put("redirect", false);

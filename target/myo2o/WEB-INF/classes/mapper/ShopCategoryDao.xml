@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wu.dao.ShopCategoryDao">
-    <select id="queryShopCategory" resultType="com.wu.entity.ShopCategory">
+    <select id="queryShopCategory" resultType="com.wu.entity.ShopCategory" >
         select
         shop_category_id,
         shop_category_name,
@@ -26,4 +26,6 @@
         order by
         priority DESC
     </select>
+    
+
 </mapper>
